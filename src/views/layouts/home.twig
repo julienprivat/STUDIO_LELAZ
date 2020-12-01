@@ -3,14 +3,19 @@
 
 <section class="page home" data-namespace="home" dir="ltr" data-part="">
 
-    <div class="home_desk">
-        {% for key, item in page.meta("polas_home") %}
-            <div id='thum{{key}}' class='thums' style='background-image:url({{ Image(item.polas_home_image).src('medium') }});z-index:{{item.polas_home_importance}};'><img src='/wp-content/themes/EB/assets/icons/pola.png' width='70px'></div>
-        {% endfor %}
+    <div class="big_part project_part">
+        <div class="big_part_item main_item main_item_left">
+            <h2 class="title_part">PROJETS</h2>
+            <div class="description_part">Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose.  Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose. Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose.  Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose.</div>
+            <a class="link">Voir tous les projets...</a>
+        </div>
     </div>
-
-    <div class="logo_mobile">
-        <div class="logo_container" data-splitting>EB</div>
+    <div class="big_part object_part">
+        <div class="big_part_item main_item main_item_right">
+            <h2 class="title_part">OBJETS</h2>
+            <div class="description_part">Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose.  Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose. Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose.  Un texte d’explication en une phrase sur ce qu’est l’agence et ce qu’elle propose.</div>
+            <a class="link">Voir tous les projets...</a>
+        </div>
     </div>
 
 </section>

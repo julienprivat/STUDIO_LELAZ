@@ -6,284 +6,44 @@
 
 .home {
 
-    position: absolute;
-    top: 50%;
-    margin-top: -400px;
-    left: 50%;
-    margin-left: -500px;
-    width: 1000px;
-    height: 800px;
-    /* background-image: url(cover/ex.jpg); */
-    background-repeat: no-repeat;
-    background-position: center center;
+    display: flex;
 
-    @include sizeone {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        top: unset;
-        left: unset;
-        margin-top: 0;
-        margin-left: 0;
-    }
+    .big_part {
 
-    .home_desk {
+        width: 50%;
+        height: auto;
+        // background-color: red;
 
-        @include sizeone {
+        height: calc(100vh - 73px);
+        overflow: scroll;
 
-            display: none;
+
+
+        &_item {
+
+            height: calc(100vh - 73px);
+            box-sizing: border-box;
+            padding: 14px;
+
+            border-bottom: 1px solid $black;
 
         }
-    }
 
-    .logo_mobile {
-
-        display: none;
-
-        @include sizeone {
+        .main_item {
 
             display: flex;
-            height: 90%;
-            justify-content: center;
-            align-items: center;
-        }
+            flex-direction: column;
+            justify-content: flex-end;
 
-        .logo_container {
-            font-size: 11rem;
-            position: relative;
-            opacity: 0;
-            overflow: hidden;
+            &_left {
 
-            .word > .char {
-                // opacity: 0;
-                transform: translate(0px, 140px);
-                will-change: transform;
-                display: inline-block;
+                padding-left: 0;
             }
 
+            &_right {
+
+                padding-right: 0;
+            }
         }
-    }
-
-    .thums {
-        position: absolute;
-        background-size: cover;
-        background-position: center center;
-        width: 68px;
-        height: 72px;
-    }
-
-
-    #thum0 {
-        top: 179px;
-        left: 135px;
-            margin-left: 11;
-            margin-top:9;
-    }
-
-    #thum1 {
-            top:153px; left:404px;margin-left:12;margin-top:3;
-    }
-    #thum2 {
-            top:160px; left:304px;margin-left:7;margin-top:0;
-    }
-    #thum3 {
-            top:226px; left:121px;margin-left:19;margin-top:13;
-    }
-    #thum4 {
-        top: 148px;
-        left: 112px;margin-left:5;margin-top:5;
-    }
-    #thum5 {
-            top:140px; left:247px;margin-left:17;margin-top:2;
-    }
-    #thum6 {
-            top:297px; left:136px;margin-left:18;margin-top:0;
-    }
-    #thum7 {
-        top: 256px;
-        left: 114px;margin-left:3;margin-top:15;
-    }
-    #thum8 {
-            top:142px; left:353px;margin-left:16;margin-top:16;
-    }
-    #thum9 {
-            top:337px; left: 111px;margin-left:6;margin-top:18;
-    }
-    #thum10 {
-            top:154px; left:195px;margin-left:2;margin-top:4;
-    }
-    #thum11 {
-            top:351px; left:172px;margin-left:10;margin-top:7;
-    }
-    #thum12 {
-            top:491px; left:113px;margin-left:13;margin-top:13;
-    }
-    #thum13 {
-        top: 441px;
-        left: 132px;margin-left:20;margin-top:13;
-    }
-    #thum14 {
-            top:331px; left:362px;margin-left:5;margin-top:2;
-    }
-    #thum15 {
-            top:351px; left:321px;margin-left:13;margin-top:20;
-    }
-    #thum16 {
-        top: 402px;
-        left: 111px;margin-left:2;margin-top:4;
-    }
-    #thum17 {
-        top: 357px;
-        left: 254px;margin-left:3;margin-top:20;
-    }
-    #thum18 {
-        top:327px; left:291px;margin-left:15;margin-top:4;
-    }
-    #thum19 {
-        top:328px; left:209px;margin-left:19;margin-top:16;
-    }
-    #thum20 {
-        top: 366px;
-        left: 371px;margin-left:15;margin-top:10;
-    }
-    #thum21 {
-        top: 572px; left:427px;margin-left:0;margin-top:15;
-    }
-    #thum22 {
-        top: 571px;
-        left: 104px;margin-left:9;margin-top:16;
-    }
-    #thum23 {
-        top: 536px;
-        left: 151px;margin-left:13;margin-top:20;
-    }
-    #thum24 {
-        
-    top: 569px;
-    left: 186px;margin-left:18;margin-top:16;
-    }
-    #thum25 {
-        top:542px; left:303px;margin-left:16;margin-top:14;
-    }
-    #thum26 {
-        top:554px; left:364px;margin-left:19;margin-top:2;
-    }
-    #thum27 {
-        top: 572px;
-        left: 261px;margin-left:1;margin-top:0;
-    }
-    #thum28 {
-        top: 576px; left:344px;margin-left:3;margin-top:5;
-    }
-    #thum29 {
-        top:139px; left:597px;margin-left:7;margin-top:13;
-    }
-    #thum30 {
-        top: 141px;left: 509px;margin-left:15;margin-top:1;
-    }
-    #thum31 {
-        top: 172px;
-        left: 531px;margin-left:12;margin-top:1;
-    }
-    #thum32 {
-        top: 203px;
-    left: 558px;margin-left:10;margin-top:20;
-    }
-    #thum33 {
-        top: 245px;
-        left: 520px;margin-left:10;margin-top:2;
-    }
-    #thum34 {
-        top: 288px;left: 545px;margin-left:0;margin-top:7;
-    }
-    #thum35 {
-        top:368px; left:523px;margin-left:3;margin-top:9;
-    }
-    #thum36 {
-        top:317px; left:571px;margin-left:12;margin-top:17;
-    }
-    #thum37 {
-        top:338px; left:605px;margin-left:12;margin-top:6;
-    }
-    #thum38 {
-        top: 468px;
-        left: 517px;margin-left:10;margin-top:9;
-    }
-    #thum39 {
-        top:429px; left:552px;margin-left:11;margin-top:12;
-    }
-    #thum40 {
-        top: 533px;
-        left: 548px;margin-left:0;margin-top:0;
-    }
-    #thum41 {
-        top: 569px;
-        left: 517px;margin-left:9;margin-top:20;
-    }
-    #thum42 {
-        top:162px; left:646px;margin-left:9;margin-top:17;
-    }
-    #thum43 {
-        top:141px; left:695px;margin-left:0;margin-top:1;
-    }
-    #thum44 {
-        top:162px; left:740px;margin-left:14;margin-top:17;
-    }
-    #thum45 {
-        top:143px; left:785px;margin-left:12;margin-top:17;
-    }
-    #thum46 {
-        top:220px; left:804px;margin-left:9;margin-top:9;
-    }
-    #thum47 {
-        top:209px; left:841px;margin-left:6;margin-top:12;
-    }
-    #thum48 {
-        top:305px; left:846px;margin-left:2;margin-top:18;
-    }
-    #thum49 {
-        top:283px; left:793px;margin-left:17;margin-top:2;
-    }
-    #thum50 {
-        top:334px; left:769px;margin-left:14;margin-top:8;
-    }
-    #thum51 {
-        top:345px; left:716px;margin-left:2;margin-top:18;
-    }
-    #thum52 {
-        top:354px; left:652px;margin-left:19;margin-top:7;
-    }
-    #thum53 {
-        top:375px; left:576px;margin-left:17;margin-top:10;
-    }
-    #thum54 {
-        top:391px; left:817px;margin-left:15;margin-top:7;
-    }
-    #thum55 {
-        top:421px; left:868px;margin-left:12;margin-top:8;
-    }
-    #thum56 {
-        top:471px; left:823px;margin-left:17;margin-top:10;
-    }
-    #thum57 {
-        top:474px; left:867px;margin-left:17;margin-top:11;
-    }
-    #thum58 {
-        top: 538px;left: 817px;margin-left:11;margin-top:14;
-    }
-    #thum59 {
-        top: 574px;left: 774px;margin-left:16;margin-top:0;
-    }
-    #thum60 {
-        top: 582px;left: 722px;margin-left:0;margin-top:6;
-    }
-    #thum61 {
-        top: 564px;left: 645px;margin-left:17;margin-top:8;
-    }
-    #thum62 {
-        top: 577px;left: 607px;margin-left:4;margin-top:10;
-    }
-    #thum63 {
-        top:546px; left:574px;margin-left:12;margin-top:12;
     }
 }

@@ -2,7 +2,7 @@
 /*        FONT FACE DECLARATION
 /* ------------------------------------------------------------------ */
 
-$base-fonts-path : '/wp-content/themes/EB/assets/fonts';
+$base-fonts-path : '/wp-content/themes/lelaz/assets/fonts';
 @font-face {
     font-family: 'NB';
     src: url(#{$base-fonts-path}/NB_International_Pro_Regular.otf);
@@ -11,12 +11,21 @@ $base-fonts-path : '/wp-content/themes/EB/assets/fonts';
     font-style: normal;
 }
 @font-face {
-    font-family: 'NB';
+    font-family: 'NBbold';
     src: url(#{$base-fonts-path}/NB_International_Pro_Bold.otf);
         //  url(#{$base-fonts-path}/SyndicatGrotesk-RegularItalic.woff) format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'flute';
+    src: url(#{$base-fonts-path}/Flute.ttf);
+        //  url(#{$base-fonts-path}/SyndicatGrotesk-RegularItalic.woff) format('woff');
     font-weight: 300;
-    font-style: italic;
+    font-style: normal;
 }
 
 
 $nb: 'NB';
+$nbb: 'NBbold';
+$flute: 'flute';
