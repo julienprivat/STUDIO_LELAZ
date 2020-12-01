@@ -15,7 +15,8 @@
         // background-color: red;
 
         height: calc(100vh - 73px);
-        overflow: scroll;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
 
 
 
@@ -23,6 +24,7 @@
 
             box-sizing: border-box;
             padding: 14px;
+            scroll-snap-align: start;
 
             border-bottom: 1px solid $black;
 

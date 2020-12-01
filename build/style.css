@@ -1532,6 +1532,10 @@ body {
   line-height: 1.5;
   text-decoration: underline; }
 
+.flute {
+  font-family: "flute";
+  text-transform: uppercase; }
+
 /* ------------------------------------------------------------------ */
 /*        General HTML - BODY
 /* ------------------------------------------------------------------ */
@@ -1570,10 +1574,12 @@ body {
     width: 50%;
     height: auto;
     height: calc(100vh - 73px);
-    overflow: scroll; }
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; }
     .home_part_item {
       box-sizing: border-box;
       padding: 14px;
+      scroll-snap-align: start;
       border-bottom: 1px solid #0A1E32; }
     .home_part .main_item {
       height: calc(100vh - 73px);
