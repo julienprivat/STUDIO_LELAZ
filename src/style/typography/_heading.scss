@@ -8,15 +8,17 @@ a {
 }
 html {
     color: var(--black);
-    font-family: $synd, sans-serif;
+    font-family: $nb, sans-serif;
 
     background: #e4e4e4;
 
-    font-size: 0.8rem;
+    font-size: 0.65rem;
+    color: $black;
+    background-color: $fond;
 }
 
 body {
 
-    margin: 22px 29px;
+    margin: 20px 25px;
 
 }

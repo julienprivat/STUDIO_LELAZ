@@ -18,15 +18,16 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 
-    padding-bottom: 17px;
-    border-bottom: 1px solid black;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $black;
 
     .logo {
 
         svg {
 
-            height: 11.7px;
+            height: 11.5px;
             width: auto;
 
         }
@@ -38,7 +39,7 @@
 
         &_item {
 
-            margin-left: 15px;
+            margin-left: 18px;
 
             text-transform: uppercase;
             opacity: 1;

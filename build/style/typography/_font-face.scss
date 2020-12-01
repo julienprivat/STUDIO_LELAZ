@@ -4,19 +4,19 @@
 
 $base-fonts-path : '/wp-content/themes/EB/assets/fonts';
 @font-face {
-    font-family: 'Syndicat';
-    src: url(#{$base-fonts-path}/SyndicatGrotesk-Regular.woff2),
-         url(#{$base-fonts-path}/SyndicatGrotesk-Regular.woff) format('woff');
+    font-family: 'NB';
+    src: url(#{$base-fonts-path}/NB_International_Pro_Regular.otf);
+        //  url(#{$base-fonts-path}/SyndicatGrotesk-Regular.woff) format('woff');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Syndicat';
-    src: url(#{$base-fonts-path}/SyndicatGrotesk-RegularItalic.woff2),
-         url(#{$base-fonts-path}/SyndicatGrotesk-RegularItalic.woff) format('woff');
+    font-family: 'NB';
+    src: url(#{$base-fonts-path}/NB_International_Pro_Bold.otf);
+        //  url(#{$base-fonts-path}/SyndicatGrotesk-RegularItalic.woff) format('woff');
     font-weight: 300;
     font-style: italic;
 }
 
 
-$synd: 'Syndicat';
+$nb: 'NB';

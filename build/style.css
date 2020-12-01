@@ -65,14 +65,6 @@ canvas {
 /* ------------------------------------------------------------------ */
 /*        COLORS
 /* ------------------------------------------------------------------ */
-[data-theme="light"] {
-  --black: #242424;
-  --white: white; }
-
-[data-theme="dark"] {
-  --black: white;
-  --white: #242424; }
-
 /* ------------------------------------------------------------------ */
 /*        EASE
 /* ------------------------------------------------------------------ */
@@ -1489,14 +1481,14 @@ a.plyr__control::after, a.plyr__control::before {
 /*        FONT FACE DECLARATION
 /* ------------------------------------------------------------------ */
 @font-face {
-  font-family: 'Syndicat';
-  src: url(/wp-content/themes/EB/assets/fonts/SyndicatGrotesk-Regular.woff2), url(/wp-content/themes/EB/assets/fonts/SyndicatGrotesk-Regular.woff) format("woff");
+  font-family: 'NB';
+  src: url(/wp-content/themes/EB/assets/fonts/NB_International_Pro_Regular.otf);
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Syndicat';
-  src: url(/wp-content/themes/EB/assets/fonts/SyndicatGrotesk-RegularItalic.woff2), url(/wp-content/themes/EB/assets/fonts/SyndicatGrotesk-RegularItalic.woff) format("woff");
+  font-family: 'NB';
+  src: url(/wp-content/themes/EB/assets/fonts/NB_International_Pro_Bold.otf);
   font-weight: 300;
   font-style: italic; }
 
@@ -1509,12 +1501,14 @@ a {
 
 html {
   color: var(--black);
-  font-family: "Syndicat", sans-serif;
+  font-family: "NB", sans-serif;
   background: #e4e4e4;
-  font-size: 0.8rem; }
+  font-size: 0.65rem;
+  color: #0A1E32;
+  background-color: #EFEEE9; }
 
 body {
-  margin: 22px 29px; }
+  margin: 20px 25px; }
 
 /* ------------------------------------------------------------------ */
 /*        General HTML - BODY
@@ -1525,15 +1519,16 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 17px;
-  border-bottom: 1px solid black; }
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #0A1E32; }
   .header .logo svg {
-    height: 11.7px;
+    height: 11.5px;
     width: auto; }
   .header .nav {
     display: flex; }
     .header .nav_item {
-      margin-left: 15px;
+      margin-left: 18px;
       text-transform: uppercase;
       opacity: 1;
       transition: opacity 0.2s ease; }
