@@ -7,6 +7,13 @@
 .home {
 
     display: flex;
+    border-bottom: 1px solid $black;
+
+    margin-top: 48px;
+
+    .project_part {
+        border-right: 1px solid $black;
+    }
 
     &_part {
 
@@ -14,11 +21,9 @@
         height: auto;
         // background-color: red;
 
-        height: calc(100vh - 73px);
+        height: calc(100vh - 74.1px);
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
-
-
 
         &_item {
 

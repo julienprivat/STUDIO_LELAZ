@@ -16,12 +16,22 @@
 
 .header {
 
+    position: fixed;
+    top: 0px;
+
+    width: calc(100% - 50px);
+    box-sizing: border-box;
+
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 
     padding-bottom: 14px;
+    padding-top: 20px;
     border-bottom: 1px solid $black;
+    background-color: $fond;
+
+    z-index: 10;
 
     .logo {
 
@@ -54,4 +64,97 @@
 
         }
     }
+}
+
+/* ------------------------------------------------------------------ */
+/*        FOOTER
+/* ------------------------------------------------------------------ */
+
+.footer {
+
+    &_top {
+
+        display: flex;
+
+        .project_button {
+            border-right: 1px solid $black;
+        }
+
+        &_item {
+
+            width: 50%;
+            height: 245px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-transform: uppercase;
+
+            border-bottom: 1px solid $black;
+
+        }
+
+    }
+
+    &_bottom {
+
+        display: flex;
+        justify-content: space-around;
+        height: 58px;
+
+        .credits_part, .contact_part {
+
+            width: 25%;
+
+        }
+
+        .credits_part {
+
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 56px;
+            }
+
+            &_text {
+
+                font-size: 0.9rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 20px;
+                line-height: 1.4;
+
+            }
+        }
+
+        .studio_button {
+
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            border-right: 1px solid $black;
+            border-left: 1px solid $black;
+
+        }
+
+        .contact_part {
+
+            display: flex;
+            flex-direction: column;
+            padding-top: 13px;
+            padding-left: 17px;
+            line-height: 1.4;
+
+            text-transform: uppercase;
+
+        }
+
+    }
+
 }
