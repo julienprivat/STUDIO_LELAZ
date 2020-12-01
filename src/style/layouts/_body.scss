@@ -16,37 +16,39 @@
 
 .header {
 
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 17px;
+    border-bottom: 1px solid black;
+
+    .logo {
+
+        svg {
+
+            height: 11.7px;
+            width: auto;
+
+        }
+    }
+
     .nav {
-        position: fixed;
-        bottom: 0;
-        right: 4px;
-        transform: rotate(-90deg) translateX(27px);
-        -webkit-transform: rotate(-90deg) translateX(27px);
-        -moz-transform: rotate(-90deg) translateX(27px);
-        -ms-transform: rotate(-90deg) translateX(27px);
-        -o-transform: rotate(-90deg) translateX(27px);
 
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-
-        z-index: 1000;
 
         &_item {
 
-            border-bottom: 9px solid transparent;
+            margin-left: 15px;
+
             text-transform: uppercase;
+            opacity: 1;
+            transition: opacity 0.2s ease;
 
-            &_select span {
+            &_dash {
 
-                background-color: var(--black);
-                color: var(--white);
-                // padding: 0 4px 0 4px;
+                margin-right: 5px;
+                opacity: 0;
 
-            }
-
-            span {
-                padding: 0 4px 2px 4px;
             }
         }
     }
