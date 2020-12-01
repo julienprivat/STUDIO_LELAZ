@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------------ */
+/*        General HTML - BODY
+/* ------------------------------------------------------------------ */
+// * {
+//     outline: none;
+//     -ms-overflow-style: none;  // IE 10+
+//     overflow: -moz-scrollbars-none;  // Firefox
+//     &::-webkit-scrollbar {
+//         display: none;
+//     }
+// }
+
+/* ------------------------------------------------------------------ */
+/*        HEADER
+/* ------------------------------------------------------------------ */
+
+.header {
+
+    .nav {
+        position: fixed;
+        bottom: 0;
+        right: 4px;
+        transform: rotate(-90deg) translateX(27px);
+        -webkit-transform: rotate(-90deg) translateX(27px);
+        -moz-transform: rotate(-90deg) translateX(27px);
+        -ms-transform: rotate(-90deg) translateX(27px);
+        -o-transform: rotate(-90deg) translateX(27px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        z-index: 1000;
+
+        &_item {
+
+            border-bottom: 9px solid transparent;
+            text-transform: uppercase;
+
+            &_select span {
+
+                background-color: var(--black);
+                color: var(--white);
+                // padding: 0 4px 0 4px;
+
+            }
+
+            span {
+                padding: 0 4px 2px 4px;
+            }
+        }
+    }
+}

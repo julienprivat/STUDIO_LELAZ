@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+<title>{{ not fn('is_front_page') ? fn('wp_title', '|', true, 'right') }}{{ site.name }}</title>
+
+<meta content="{{ options.description_site }}" name="description">
+
+<!-- Open Graph -->
+<meta content="{{ options.title_site }}" name="og:title">
+<meta content="{{ options.description_site }}" name="og:description">
+<meta content="{{site.link}}" name="og:url">
+<meta content="{{ options.title_site }}" name="og:site_name">
+<meta content="{{ Image(options.image_site).src }}" name="og:image">
+
+
+<!-- Twitter -->
+{# <meta content="{{options.title}}" name="twitter:title">
+<meta content="{{options[0].descripton}}" name="twitter:description">
+<meta content="{{options[0].image-link}}" name="twitter:image">
+<meta content="summary_large_image" name="twitter:card">
+<link href="http://samuelbardaji.com" rel="canonical"> #}
+
+<!--[if lt IE 9]>
+  <script>var isIE9 = true;</script>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Icons -->
+
+<link rel="icon" type="image/ico" href="{{site.theme.path}}/assets/fav/favicon.ico" />
+{# <link rel="icon" type="image/ico" href="localhost:8888{{site.theme.path}}/assets/fav/favicon.ico" /> #}
+
+
+<link rel="stylesheet" href="{{site.theme.link}}/style.css?key={{random(50, 1000)}}">
+
+{{wp_head}}

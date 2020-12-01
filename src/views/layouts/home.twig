@@ -1,0 +1,18 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<section class="page home" data-namespace="home" dir="ltr" data-part="">
+
+    <div class="home_desk">
+        {% for key, item in page.meta("polas_home") %}
+            <div id='thum{{key}}' class='thums' style='background-image:url({{ Image(item.polas_home_image).src('medium') }});z-index:{{item.polas_home_importance}};'><img src='/wp-content/themes/EB/assets/icons/pola.png' width='70px'></div>
+        {% endfor %}
+    </div>
+
+    <div class="logo_mobile">
+        <div class="logo_container" data-splitting>EB</div>
+    </div>
+
+</section>
+
+{% endblock %}
