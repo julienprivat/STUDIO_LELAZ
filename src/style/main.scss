@@ -6,6 +6,7 @@
 @import "core/import";
 @import "components/plyr";
 @import "components/variables_plyr";
+@import "components/flickity";
 
 // Typography
 @import "typography/font-face";
@@ -16,6 +17,9 @@
 
 // Views
 @import "views/home";
+@import "views/projets";
+@import "views/studio";
+@import "views/projet";
 
 // Components
 

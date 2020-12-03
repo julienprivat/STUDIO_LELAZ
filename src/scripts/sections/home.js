@@ -3,15 +3,7 @@ import select from 'dom-select'
 import configQ from '@/util/func/configQ'
 import config from '@/config'
 import event from 'dom-event'
-import $ from 'jquery'
-import 'jquery-ui/themes/base/core.css'
-import 'jquery-ui/themes/base/theme.css'
-import 'jquery-ui/themes/base/draggable.css'
-import 'jquery-ui/ui/core'
-import 'jquery-ui/ui/widgets/draggable'
-import "splitting/dist/splitting.css"
-import "splitting/dist/splitting-cells.css"
-import Splitting from "splitting"
+import PerfectScrollbar from 'perfect-scrollbar';
 import TweenMax from 'gsap'
 import { gsap } from "gsap"
 
@@ -24,69 +16,77 @@ class Home extends Default {
 		super('home')
 	}
 	mounted() {
+
         configQ(window.innerWidth)
         this.cache()
         this.init()
+
     }
+
     cache() {
 
-        this.thums = [...document.querySelectorAll('.thums')]
+        this.containers = [...document.querySelectorAll('.home_part')]
+        this.html = document.documentElement
+        this.scrollTimer = -1
+        this.locked = false
 
-        this.preloaderItem = select('.logo_container')
-        this.LOGO = {
-            section: select('.logo_container'),
-            get chars() {
-                return this.section.querySelectorAll('.logo_container .word > .char, .whitespace')
-			},
-		}
+
+
     }
 
     init() {
 
-        if (!config.isSmall) {
-
-            this.thums.forEach((thum, key) => {
-
-                $(`#thum${key}`).draggable()
-    
-            })
-
-        } else {
-
-            setTimeout(() => {
-
-                this.split()
-
-            }, 1000)
-
-        }
+        this.addEvents('on')
 
     }
 
-    split() {
+    addEvents(type) {
 
+        this.containers.forEach((container) => {
+            event[type](container, 'scroll', (container) => {
+                this.scrollTest(container)
+            })
+        })
 
-        Splitting()
-		const timelineSettings = {
-            staggerValue: 0.2,
-            charsDuration: 0.3
-		}
+    }
 
-		let tl = gsap.timeline()
-		tl.to(this.preloaderItem, {
-			duration: 0,
-			opacity: 1,
-			ease: 'expo.easeInOut',
-		})
-		tl.add('start')
-		tl.staggerTo( this.LOGO.chars, timelineSettings.charsDuration, {
-			// ease: 'Power3.easeIn',
-			y: 0,
-		}, timelineSettings.staggerValue, 'start')
+    scrollTest(container) {
 
+        console.log(container)
+
+        if (this.scrollTimer !== -1) {
+            clearTimeout(this.scrollTimer);
+          }
+        
+          if (container.scrollTop <= 0 ||
+              container.scrollTop >= container.scrollHeight - container.offsetHeight) {
+            // if scrollbar reaches top or bottom, unlock
+            this.unlock();
+          } else {
+            this.lock();
+            // defer unlocking scroll
+            this.scrollTimer = setTimeout(this.unlock, 150); // consider 150ms of inactivity to be the end of a scroll
+          }
+
+    }
+
+    lock() {
+        if (!this.locked) {
+            this.locked = true;
+            this.html.style.overflow = 'hidden';
+        }
+    }
+
+    unlock() {
+        if (this.locked) {
+            this.locked = false;
+            this.html.style.overflow = '';
+        }
     }
 
 	beforeDestroy() {
+
+        this.addEvents('off')
 
     }
 
