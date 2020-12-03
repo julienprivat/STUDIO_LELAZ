@@ -10,17 +10,11 @@
         display: none;
     }
 
-    .footer_bottom {
-        transform: translate(0px, -2px);
-        background-color: $fond;
-    }
-
 }
 
 .home {
 
     display: flex;
-    z-index: -1;
 
     .project_part {
         border-right: 1px solid $black;
@@ -32,8 +26,6 @@
         height: calc(100vh - 72.5px);
         // height: 33vh;
         overflow-y: scroll;
-        -webkit-scroll-snap-type: mandatory;
-        -webkit-scroll-snap-points-y: repeat(100%);
         scroll-snap-type: y mandatory;
 
         &_item {
@@ -41,7 +33,6 @@
             height: calc(100vh - 72.5px);
             // height: 33vh;
             box-sizing: border-box;
-            -webkit-scroll-snap-align: end;
             scroll-snap-align: end;
 
             border-bottom: 1px solid $black;
@@ -94,6 +85,12 @@
                 bottom: 74px;
                 text-align: center;
                 width: 100%;
+            }
+
+            &:last-child {
+
+                border-bottom:0;
+
             }
         }
     }

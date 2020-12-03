@@ -6,6 +6,7 @@ import event from 'dom-event'
 import PerfectScrollbar from 'perfect-scrollbar';
 import TweenMax from 'gsap'
 import { gsap } from "gsap"
+import { detect } from 'detect-browser'
 
 
 
@@ -29,8 +30,7 @@ class Home extends Default {
         this.html = document.documentElement
         this.scrollTimer = -1
         this.locked = false
-
-
+        this.browser = detect()
 
     }
 
@@ -42,7 +42,7 @@ class Home extends Default {
 
     addEvents(type) {
 
-        this.containers.forEach((container) => {
+        this.browser.name == 'safari' && this.containers.forEach((container) => {
             event[type](container, 'scroll', (container) => {
                 this.scrollTest(container)
             })
@@ -52,12 +52,11 @@ class Home extends Default {
 
     scrollTest(container) {
 
-        console.log(container)
-
+        console.log('hello')
         if (this.scrollTimer !== -1) {
             clearTimeout(this.scrollTimer);
           }
-        
+
           if (container.scrollTop <= 0 ||
               container.scrollTop >= container.scrollHeight - container.offsetHeight) {
             // if scrollbar reaches top or bottom, unlock
