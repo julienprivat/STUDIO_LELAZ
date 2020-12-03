@@ -6,8 +6,15 @@
 
 .is-home {
 
+    margin: 10px 25px 14px 25px;
+
     .footer_top {
         display: none;
+    }
+
+    .footer_bottom {
+        transform: translate(0px, -2px);
+        background-color: $fond;
     }
 
 }
@@ -23,14 +30,14 @@
     &_part {
 
         width: 50%;
-        height: calc(100vh - 72.5px);
+        height: calc(100vh - 58.5px);
         // height: 33vh;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
 
         &_item {
 
-            height: calc(100vh - 72.5px);
+            height: calc(100vh - 58.5px);
             // height: 33vh;
             box-sizing: border-box;
             scroll-snap-align: end;
@@ -86,12 +93,13 @@
                 text-align: center;
                 width: 100%;
             }
+        }
 
-            &:last-child {
+        .last_home_part {
 
-                border-bottom:0;
+            scroll-snap-align: end;
+            width: 100%;
 
-            }
         }
     }
 }

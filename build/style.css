@@ -1773,8 +1773,13 @@ body {
 * {
   outline: 0; }
 
-.is-home .footer_top {
-  display: none; }
+.is-home {
+  margin: 10px 25px 14px 25px; }
+  .is-home .footer_top {
+    display: none; }
+  .is-home .footer_bottom {
+    transform: translate(0px, -2px);
+    background-color: #EFEEE9; }
 
 .home {
   display: flex; }
@@ -1782,11 +1787,11 @@ body {
     border-right: 1px solid #0A1E32; }
   .home_part {
     width: 50%;
-    height: calc(100vh - 72.5px);
+    height: calc(100vh - 58.5px);
     overflow-y: scroll;
     scroll-snap-type: y mandatory; }
     .home_part_item {
-      height: calc(100vh - 72.5px);
+      height: calc(100vh - 58.5px);
       box-sizing: border-box;
       scroll-snap-align: end;
       border-bottom: 1px solid #0A1E32; }
@@ -1817,8 +1822,9 @@ body {
         bottom: 74px;
         text-align: center;
         width: 100%; }
-      .home_part .presentation_item:last-child {
-        border-bottom: 0; }
+    .home_part .last_home_part {
+      scroll-snap-align: end;
+      width: 100%; }
 
 /* ------------------------------------------------------------------ */
 /*        PROJETS
