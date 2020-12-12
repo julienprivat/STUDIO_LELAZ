@@ -6,14 +6,38 @@
 
     padding-top: 17px;
 
+    @include sizeone {
+
+        padding-top: 17px;
+        height: calc(100vh - 129px);
+        overflow-y: scroll;
+
+    }
+
     &_cell {
 
         height: calc(100vh - 150px);
         margin-right: 17px;
 
+        @include sizeone {
+
+            height: auto;
+            margin-bottom: 27px;
+            margin-right: 0px;
+
+        }
+
         .img {
+
             height: 100%;
             width: auto;
+
+            @include sizeone {
+
+                height: auto;
+                width: 100%;
+
+            }
         }
 
     }
@@ -49,12 +73,29 @@
 
 .infos_band {
 
-    display: flex;
-    flex-wrap: nowrap;
     height: 86px;
     padding-bottom: 17px;
     padding-top: 17px;
     border-bottom: 1px solid $black;
+
+    @include sizeone {
+
+        width: 100%;
+        overflow-x: scroll;
+
+    }
+
+    &_container {
+
+        display: flex;
+        flex-wrap: nowrap;
+
+        @include sizeone {
+
+            width: fit-content;
+
+        }
+    }
 
     &_item {
 
@@ -67,6 +108,12 @@
         width: calc(100% / 8 * 2);
         padding: 0px 0px;
 
+        @include sizeone {
+
+            width: calc(100vw / 7 * 2);
+
+        }
+
     }
 
     .projet {
@@ -74,17 +121,30 @@
         width: calc(100% / 8 * 4);
         border-left: 1px solid $black;
 
-        .title_part {
-            text-align: center;
-            padding-top: 7px;
+        @include sizeone {
+
+            width: calc(100vw / 7 * 4);
+
         }
 
+        .title_part {
+
+            text-align: center;
+            padding-top: 7px;
+
+        }
     }
 
     .location, .date {
 
         width: calc(100% / 8);
         border-left: 1px solid $black;
+
+        @include sizeone {
+
+            width: calc(100vw / 7 * 2);
+
+        }
 
     }
 
@@ -103,13 +163,46 @@
 
     display: flex;
     padding-bottom: 31px;
-    border-bottom: 1px solid $black;
+
+    @include sizeone {
+
+        padding-bottom: 37px;
+
+    }
 
     &_item {
 
         width: calc(100% / 5);
         height: 200px;
         padding: 20px;
+
+        @include sizeone {
+
+            display: none;
+            width: auto;
+
+            height: 180px;
+            padding: 25px;
+
+        }
+
+        &:first-child {
+
+            @include sizeone {
+
+                display: block;
+
+            }
+        }
+
+        &:last-child {
+
+            @include sizeone {
+
+                display: block;
+
+            }
+        }
 
         .img {
 

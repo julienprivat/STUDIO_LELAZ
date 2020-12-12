@@ -5,61 +5,85 @@
             <h2 class="title_part">Projects</h2>
             <div class="nav_projects">
                 <div class="nav_projects_categories">
-                    <div class="nav_item nav_item_select"><span class="nav_item_dash">—</span>Tous les projets</div>
-                    <div class="nav_item"><span class="nav_item_dash">—</span>hotel</div>
-                    <div class="nav_item"><span class="nav_item_dash">—</span>hotel</div>
-                    <div class="nav_item"><span class="nav_item_dash">—</span>hotel</div>
-                    <div class="nav_item"><span class="nav_item_dash">—</span>hotel</div>
+                    <div id='all' class="nav_projects_item turn_button nav_projects_item_select"><span class="first"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>Tous les projets</span><span class="second"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>tous les projets</span></div>
+                    <div id="hotel" class="nav_projects_item turn_button"><span class="first"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>hotel</span><span class="second"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>hotel</span></div>
+                    <div id="prive" class="nav_projects_item turn_button"><span class="first"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>appartement privé</span><span class="second"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>appartement privé</span></div>
+                    <div id="scenography" class="nav_projects_item turn_button"><span class="first"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>Scénographie</span><span class="second"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>Scénographie</span></div>
+                    <div id="restaurant" class="nav_projects_item turn_button"><span class="first"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>Restaurant</span><span class="second"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>Restaurant</span></div>
                 </div>
                 <div class="nav_projects_format">
-                    <div class="nav_item nav_item_select"><span class="nav_item_dash">—</span>images</div>
-                    <div class="nav_item"><span class="nav_item_dash">—</span>tableau</div>
+                    <div class="nav_projects_item turn_button nav_projects_item_select nav_projects_item_image"><span class="first"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>image</span><span class="second"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>image</span></div>
+                    <div class="nav_projects_item turn_button nav_projects_item_list"><span class="first"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>liste</span><span class="second"><span class="nav_projects_item_dash">{% include 'dash.twig' %}</span>liste</span></div>
                 </div>
             </div>
         </div>
         <div class="wall">
-            <div class="wall_item">
+            <div class="wall_item project_select" data-cat="hotel">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            </div>
+            <div class="wall_item project_select" data-cat="restaurant">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
+                <h3 class="legend_part">Restaurant — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            </div>
+            <div class="wall_item project_select" data-cat="scenography">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Scénographie — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            </div>
+            <div class="wall_item project_select" data-cat="hotel">
                 <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
                 <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
+            <div class="wall_item project_select" data-cat="hotel">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
                 <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            <div class="wall_item project_select" data-cat="prive">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Appartement privé — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            <div class="wall_item project_select" data-cat="prive">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Appartement privé — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            <div class="wall_item project_select" data-cat="scenography">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Scénographie — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
+            <div class="wall_item project_select" data-cat="restaurant">
                 <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+                <h3 class="legend_part">Restaurant — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            <div class="wall_item project_select" data-cat="prive">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Appartement privé — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            <div class="wall_item project_select" data-cat="scenography">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Scénographie — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            <div class="wall_item project_select" data-cat="scenography">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Scénographie — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
-                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
-                <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            <div class="wall_item project_select" data-cat="prive">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Appartement privé — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
-            <div class="wall_item">
+            <div class="wall_item project_select" data-cat="restaurant">
                 <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
+                <h3 class="legend_part">Restaurant — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            </div>
+            <div class="wall_item project_select" data-cat="restaurant">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image.png"></div>
+                <h3 class="legend_part">Restaurant — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            </div>
+            <div class="wall_item project_select" data-cat="prive">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
+                <h3 class="legend_part">Appartement privé — <span class="flute">Le Pin Hotel</span> — 2020</h3>
+            </div>
+            <div class="wall_item project_select" data-cat="hotel">
+                <div class="image_container"><img class="img" src="{{site.theme.uri}}/assets/image/image3.png"></div>
                 <h3 class="legend_part">Hôtel — <span class="flute">Le Pin Hotel</span> — 2020</h3>
             </div>
         </div>
@@ -71,115 +95,169 @@
                     <div class="type legends_location">Localisation</div>
                     <div class="type legends_date">Date</div>
                 </div>
-                <div class="project">
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
                     <div class="info project_date">2020</div>
                 </div>
-                <div class="project">
+                <div class="project project_select" data-cat="scenography">
+                    <div class="info project_categorie">Scénographie</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="restaurant">
+                    <div class="info project_categorie">Restaurant</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="scenography">
+                    <div class="info project_categorie">Scénographie</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
                     <div class="info project_date">2020</div>
                 </div>
-                <div class="project">
+                <div class="project project_select" data-cat="scenography">
+                    <div class="info project_categorie">Scénographie</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
                     <div class="info project_date">2020</div>
                 </div>
-                <div class="project">
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="restaurant">
+                    <div class="info project_categorie">Restaurant</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="scenography">
+                    <div class="info project_categorie">Scénographie</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="scenography">
+                    <div class="info project_categorie">Scénographie</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="restaurant">
+                    <div class="info project_categorie">Restaurant</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
                     <div class="info project_date">2020</div>
                 </div>
-                <div class="project">
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="scenography">
+                    <div class="info project_categorie">Scénographie</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="scenography">
+                    <div class="info project_categorie">Scénographie</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
                     <div class="info project_date">2020</div>
                 </div>
-                <div class="project">
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="prive">
+                    <div class="info project_categorie">Appartement Privé</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="restaurant">
+                    <div class="info project_categorie">Restaurant</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
                     <div class="info project_date">2020</div>
                 </div>
-                <div class="project">
+                <div class="project project_select" data-cat="restaurant">
+                    <div class="info project_categorie">Restaurant</div>
+                    <div class="title_part project_project">Le pin Hotel</div>
+                    <div class="info project_location">Nice</div>
+                    <div class="info project_date">2020</div>
+                </div>
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
                     <div class="info project_date">2020</div>
                 </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
-                    <div class="info project_categorie">Hotel</div>
-                    <div class="title_part project_project">Le pin Hotel</div>
-                    <div class="info project_location">Nice</div>
-                    <div class="info project_date">2020</div>
-                </div>
-                <div class="project">
+                <div class="project project_select" data-cat="hotel">
                     <div class="info project_categorie">Hotel</div>
                     <div class="title_part project_project">Le pin Hotel</div>
                     <div class="info project_location">Nice</div>
@@ -187,7 +265,7 @@
                 </div>
             </div>
             <div class="visual_part">
-                <div class="image_container"><img class="img lazyload" src="{{site.theme.uri}}/assets/image/image.png"></div>
+                <div class="image_container"><img class="img lazyload" src="{{site.theme.uri}}/assets/image/image3.png"></div>
             </div>
         </div>
     </section>

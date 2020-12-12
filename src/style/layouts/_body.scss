@@ -26,8 +26,8 @@
     justify-content: space-between;
     align-items: baseline;
 
-    padding-bottom: 14px;
-    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-top: 15px;
     border-bottom: 1px solid $black;
     background-color: $fond;
 
@@ -49,7 +49,7 @@
 
         &_item {
 
-            margin-left: 18px;
+            padding-left: 18px;
 
             text-transform: uppercase;
             opacity: 1;
@@ -59,6 +59,16 @@
 
                 margin-right: 5px;
                 opacity: 0;
+
+            }
+
+            &_studio {
+
+                @include sizeone {
+
+                    display: none;
+
+                }
 
             }
 
@@ -72,8 +82,11 @@
 
 .footer, footer {
 
+    opacity: 0;
+    transform: translate(0, 10px);
     // scroll-snap-stop: always;
-    // scroll-snap-align: end;
+    transform: translate(0px, -2px);
+    background-color: $fond;
 
 
     &_top {
@@ -83,6 +96,12 @@
 
         .project_button {
             border-right: 1px solid $black;
+        }
+
+        @include sizeone {
+
+            display: none;
+
         }
 
         &_item {
@@ -96,8 +115,32 @@
 
             text-transform: uppercase;
 
+            @include sizeone {
+
+                height: 150px;
+
+            }
+
         }
 
+    }
+
+    &_top_mobile {
+
+        display: none;
+
+        @include sizeone {
+
+            display: flex;
+
+        }
+
+        .footer_top_item {
+
+            width: 100%;
+            border-top: 1px solid $black;
+
+        }
     }
 
     &_bottom {
@@ -111,6 +154,12 @@
 
             width: 25%;
 
+            @include sizeone {
+
+                width: 50%;
+
+            }
+
         }
 
         .credits_part {
@@ -118,9 +167,21 @@
             display: flex;
             align-items: center;
 
+            @include sizeone {
+
+                border-right: 1px solid $black;
+
+            }
+
             svg {
                 width: 46px;
                 padding-top: 3px;
+
+                @include sizeone {
+
+                    width: 54px;
+
+                }
 
             }
 
@@ -133,6 +194,28 @@
                 margin-left: 20px;
                 line-height: 1.4;
                 padding-top: 3px;
+
+                @include sizethree {
+
+                    font-size: 0.8rem;
+                }
+
+                @include sizetwo {
+
+                    font-size: 0.7rem;
+                }
+
+                @include sizeone {
+
+                    font-size: 0.8rem;
+
+                    p:last-child {
+
+                        display: none;
+
+                    }
+
+                }
 
 
             }
@@ -150,6 +233,12 @@
             border-left: 1px solid $black;
             padding-top: 5px;
 
+            @include sizeone {
+
+                display: none;
+
+            }
+
         }
 
         .contact_part {
@@ -162,8 +251,63 @@
 
             text-transform: uppercase;
 
+            @include sizeone {
+
+                padding-top: 18px;
+                padding-left: 0;
+
+            }
+
+            &_item {
+
+                @include sizeone {
+
+                    text-align: center;
+
+                }
+
+                &:first-child {
+
+                    @include sizeone {
+
+                        display: none;
+
+                    }
+
+                }
+
+            }
+
         }
 
     }
+
+}
+
+/* ------------------------------------------------------------------ */
+/*        Preloader
+/* ------------------------------------------------------------------ */
+.progress_bar {
+
+    position: fixed;
+    height: 3px;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    z-index: 10000;
+    transition: width 0.05s ease;
+
+}
+
+.preloader {
+
+    width: 100%;
+    height: 100%;
+    background-color: $fond;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 100;
 
 }

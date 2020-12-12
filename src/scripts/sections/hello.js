@@ -31,7 +31,7 @@ class Hello extends Default {
 
     init() {
 
-        this.initCarousel()
+        !config.isSmall && this.initCarousel()
 
     }
 
@@ -49,7 +49,6 @@ class Hello extends Default {
             lazyLoad: true,
 
 		})
-
     }
 
 	beforeDestroy() {

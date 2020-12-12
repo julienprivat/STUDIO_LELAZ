@@ -1,8 +1,8 @@
 <header class="header">
     <h1 class="logo"><a href="/">{% include 'logo.twig' %}</a></h1>
 	<nav class="nav">
-        <div class="nav_item"><a href="/projets"><span class="nav_item_dash">—</span>Projets</a></div>
-        <div class="nav_item"><a href="/objets"><span class="nav_item_dash">—</span>Objets</a></div>
-        <div class="nav_item"><a href="/studio"><span class="nav_item_dash">—</span>Le Studio</a></div>
+        <a class="nav_item nav_item_projets turn_button" href="/projets"><div class="first"><span class="nav_item_dash">{% include 'dash.twig' %}</span>Projets</div><div class="second"><span class="nav_item_dash">{% include 'dash.twig' %}</span>Projets</div></a>
+        <a class="nav_item nav_item_objets turn_button" href="/objets"><div class="first"><span class="nav_item_dash">{% include 'dash.twig' %}</span>Objets</div><div class="second"><span class="nav_item_dash">{% include 'dash.twig' %}</span>Objets</div></a>
+        <a class="nav_item nav_item_studio turn_button" href="/studio"><div class="first"><span class="nav_item_dash">{% include 'dash.twig' %}</span>Le Studio</div><div class="second"><span class="nav_item_dash">{% include 'dash.twig' %}</span>Le Studio</div></a>
     </nav>
 </header>

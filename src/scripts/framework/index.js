@@ -62,13 +62,13 @@ export default class Framework {
 		this.traverseApp('onNewPageReady', ...args)
 
 		setTimeout(() => {
-			const link = select('.page').dataset.part
+			const link = select('.page').dataset.namespace
 			const siteUrl = window.location.pathname
-			const navigation = document.querySelector('nav')
+			const navigation = document.querySelector('.nav')
 			const navigationLinks = [...navigation.querySelectorAll('.nav_item')]
-			const navigationLinkIsActive = navigation.querySelector(`[href="/${link}"]`)
+			const navigationLinkIsActive = navigation.querySelector(`.nav_item[href="${siteUrl}"]`)
 	
-			console.log(link, siteUrl)
+			console.log('link', link, 'siteUrl','nav_item[href="/${link}"]')
 			navigationLinks.forEach((navigationLink) => {
 				navigationLink.closest('.nav_item').classList.remove('nav_item_select')
 			}) // remove CSS class 'is-active' from all .navigation__links

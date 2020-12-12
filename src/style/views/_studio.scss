@@ -6,6 +6,9 @@
 
     .description_agence {
 
+        scroll-snap-align: start;
+        scroll-margin-top: 49px;
+
         height: calc(100vh - 74.1px);
         display: flex;
 
@@ -21,11 +24,28 @@
             padding-right: 17px;
             padding-bottom: 17px;
 
+            @include sizeone {
+
+                width: 100%;
+                padding-right: 0;
+
+            }
+
         }
 
         &_image {
 
             width: 50%;
+
+            @include sizeone {
+
+                display: block;
+                position: absolute;
+                padding: 26%;
+                top: calc(15vh);
+                width: 100%;
+
+            }
 
             img {
 
@@ -40,6 +60,16 @@
     .contact_agence {
 
         display: flex;
+        scroll-snap-align: end;
+        -webkit-scroll-snap-stop: always;
+        scroll-snap-stop: always;
+        scroll-margin-top: 0px;
+
+        @include sizeone {
+
+            flex-direction: column;
+
+        }
 
         &_item {
 
@@ -52,6 +82,12 @@
             text-transform: uppercase;
             line-height: 1.4;
 
+            @include sizeone {
+
+                width: 100%;
+
+            }
+
         }
 
         &_location {
@@ -60,7 +96,12 @@
             flex-direction: column;
             border-right: 1px solid $black;
 
-        }
+            @include sizeone {
 
+                border-right: 0;
+                border-bottom: 1px solid $black;
+
+            }
+        }
     }
 }
